@@ -1,7 +1,7 @@
 # Quantum Wave Stimulator
 
 ## Project Overview
-The Quantum Wave Stimulator (QBET) is an innovative project aimed at creating a quantum wave stimulator. This project leverages cutting-edge quantum technology to simulate and manipulate quantum waves for various applications.
+The Quantum Wave Stimulator is an innovative project aimed at creating a quantum wave stimulator. This project leverages cutting-edge quantum technology to simulate and manipulate quantum waves for various applications.
 
 ## Features
 - **Quantum Wave Simulation**: Simulate quantum waves with high precision.
