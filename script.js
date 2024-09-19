@@ -11,6 +11,35 @@ let wave = {
 };
 
 let increment = wave.frequency;
+let increaseInterval, decreaseInterval;
+
+document.getElementById('increaseFreq').addEventListener('mousedown', () => {
+    increaseInterval = setInterval(() => {
+        wave.frequency += 0.001;
+    }, 50);
+});
+
+document.getElementById('increaseFreq').addEventListener('mouseup', () => {
+    clearInterval(increaseInterval);
+});
+
+document.getElementById('decreaseFreq').addEventListener('mousedown', () => {
+    decreaseInterval = setInterval(() => {
+        wave.frequency -= 0.001;
+    }, 50);
+});
+
+document.getElementById('decreaseFreq').addEventListener('mouseup', () => {
+    clearInterval(decreaseInterval);
+});
+
+document.getElementById('setFreq').addEventListener('change', (event) => {
+    wave.frequency = parseFloat(event.target.value) / 1000;
+});
+
+document.getElementById('resetFreq').addEventListener('click', () => {
+    wave.frequency = 0.01;
+});
 
 function animate() {
     requestAnimationFrame(animate);
