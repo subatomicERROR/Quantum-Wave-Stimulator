@@ -13,31 +13,31 @@ let wave = {
 let increment = wave.frequency;
 let increaseInterval, decreaseInterval;
 
-document.getElementById('increaseFreq').addEventListener('mousedown', () => {
+document.getElementById('increase-frequency').addEventListener('mousedown', () => {
     increaseInterval = setInterval(() => {
         wave.frequency += 0.001;
     }, 50);
 });
 
-document.getElementById('increaseFreq').addEventListener('mouseup', () => {
+document.getElementById('increase-frequency').addEventListener('mouseup', () => {
     clearInterval(increaseInterval);
 });
 
-document.getElementById('decreaseFreq').addEventListener('mousedown', () => {
+document.getElementById('decrease-frequency').addEventListener('mousedown', () => {
     decreaseInterval = setInterval(() => {
         wave.frequency -= 0.001;
     }, 50);
 });
 
-document.getElementById('decreaseFreq').addEventListener('mouseup', () => {
+document.getElementById('decrease-frequency').addEventListener('mouseup', () => {
     clearInterval(decreaseInterval);
 });
 
-document.getElementById('setFreq').addEventListener('change', (event) => {
+document.getElementById('set-frequency').addEventListener('change', (event) => {
     wave.frequency = parseFloat(event.target.value) / 1000;
 });
 
-document.getElementById('resetFreq').addEventListener('click', () => {
+document.getElementById('reset-frequency').addEventListener('click', () => {
     wave.frequency = 0.01;
 });
 
