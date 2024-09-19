@@ -10,10 +10,20 @@ body {
     font-size: 14px;
 }
 
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 canvas {
     display: block;
-    width: 100%;
-    height: auto;
 }
 
 .button-container {
@@ -26,23 +36,27 @@ canvas {
 }
 
 .button-container button, .button-container input {
-    flex: 1 1 auto;
-    min-width: 100px;
-    padding: 10px 20px;
+    padding: 7px 14px;
     background-color: #222;
     color: #0ff;
     border: 2px solid #0ff;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 14px;
     text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    flex: 1 1 auto;
+    min-width: 100px;
 }
 
 .button-container button:hover, .button-container input:hover {
     background-color: #0ff;
     color: #222;
     box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.button-container input {
+    width: 200px;
 }
 
 .reset-button {
@@ -52,22 +66,9 @@ canvas {
     text-align: center;
 }
 
-@media (min-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-
-    .button-container {
-        top: 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-
-    .button-container {
-        top: 30px;
+@media (max-width: 600px) {
+    .button-container button, .button-container input {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 }

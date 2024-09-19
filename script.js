@@ -41,6 +41,26 @@ document.getElementById('reset-frequency').addEventListener('click', () => {
     wave.frequency = 0.01;
 });
 
+document.getElementById('increase-frequency').addEventListener('touchstart', () => {
+    increaseInterval = setInterval(() => {
+        wave.frequency += 0.001;
+    }, 50);
+});
+
+document.getElementById('increase-frequency').addEventListener('touchend', () => {
+    clearInterval(increaseInterval);
+});
+
+document.getElementById('decrease-frequency').addEventListener('touchstart', () => {
+    decreaseInterval = setInterval(() => {
+        wave.frequency -= 0.001;
+    }, 50);
+});
+
+document.getElementById('decrease-frequency').addEventListener('touchend', () => {
+    clearInterval(decreaseInterval);
+});
+
 function animate() {
     requestAnimationFrame(animate);
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
